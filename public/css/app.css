@@ -1,0 +1,31 @@
+body{
+    background: linear-gradient(#000000, #132135) fixed;
+    color: #EEE;
+    font-family: 'Ibarra Real Nova', serif;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+a{
+    color: #DDDDDD;
+    text-decoration: none;
+}
+
+footer
+{
+    text-align:center;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    display:inline-block;
+    vertical-align:top;
+    font-size:13px;
+}

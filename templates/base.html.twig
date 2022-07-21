@@ -7,6 +7,9 @@
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
         {% endblock %}
 
         {% block javascripts %}
@@ -19,14 +22,14 @@
                 <ul>
                     <li><a href="{{ path('main_home') }}">Home</a></li>
                     <li><a href="{{ path('main_test') }}">Test</a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="{{ path('main_about') }}">About us</a></li>
                 </ul>
             </nav>
         </header>
         {% block body %}{% endblock %}
 
         <footer>
-
+                &copy Le site
         </footer>
     </body>
 </html>
