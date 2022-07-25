@@ -5,7 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class mainController extends AbstractController
+class MainController extends AbstractController
 {
     /**
      * @Route("/",name="main_home")
@@ -26,7 +26,6 @@ class mainController extends AbstractController
      * @Route("/about",name="main_about")
      */
     public function about(){
-        $test = "la variable de test";
         return $this->render('main/about.html.twig');
     }
 
