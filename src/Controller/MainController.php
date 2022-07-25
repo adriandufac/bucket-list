@@ -29,12 +29,7 @@ class MainController extends AbstractController
         return $this->render('main/about.html.twig');
     }
 
-    /**
-     * @Route("/formulaire",name="main_formulaire")
-     */
-    public function formulaire(){
-        return $this->render('main/formulaire.html.twig');
-    }
+
 
 
 

@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Wish;
+use App\Form\WishType;
 use App\Repository\WishRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -29,6 +31,17 @@ class WishController extends AbstractController
         $wish = $wishRepository->find($id);
         return $this->render('wish/details.html.twig',["wish" => $wish]);
     }
+
+    /**
+     * @Route("/wish/formulaire",name="wish_formulaire")
+     */
+    public function formulaire(){
+        $wish = new Wish();
+        $wishForm = $this->createForm(WishType::class,$wish);
+
+        return $this->render('wish/formulaire.html.twig',['wishForm' =>$wishForm->createView()]);
+    }
+
 
 
 }
