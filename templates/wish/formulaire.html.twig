@@ -5,9 +5,17 @@
 {% endblock %}
 
 {% block body %}
+    <style>
+        label{
+            display:block;
+        }
+    </style>
     <div>
         <h2>Ajouter un wish</h2>
-        {{ form(wishForm) }}
+        {{ form_start(wishForm) }}
+        {{ form_widget(wishForm) }}
+        <button>Create!</button>
+        {{ form_end(wishForm) }}
     </div>
 
 {% endblock %}
