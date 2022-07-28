@@ -41,6 +41,8 @@ class WishController extends AbstractController
     public function formulaire(Request $request,EntityManagerInterface $entityManager){
 
         $wish = new Wish();
+        $wish->setAuthor($this->getUser()->getPseudo());
+
         $wishForm = $this->createForm(WishType::class,$wish);
 
         $wishForm->handleRequest($request);
